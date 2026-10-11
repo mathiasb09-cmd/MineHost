@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<title>MineHost – Minecraft Server & Community</title>
+<style>
+:root{--bg:#080e19;--panel:#101a2b;--panel2:#142238;--line:#243550;--text:#edf4ff;--muted:#9db0ca;--green:#4ade80;--green2:#22c55e;--blue:#60a5fa;--red:#fb7185;--yellow:#facc15;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#132541 0,#080e19 55%);color:var(--text);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:10;background:#080e19eF;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.25rem;letter-spacing:-.5px}.logo{display:grid;place-items:center;width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#4ade80,#16a34a);color:#052e16;font-size:1.3rem}.navlinks{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.navlinks a,.navlinks button{background:transparent;border:0;color:var(--muted);padding:9px 11px;border-radius:10px;cursor:pointer}.navlinks a:hover,.navlinks button:hover{background:var(--panel2);color:var(--text)}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font-weight:750;cursor:pointer;transition:.15s}.btn:hover{transform:translateY(-1px);filter:brightness(1.12)}.btn.primary{background:var(--green);color:#052e16;border-color:var(--green)}.btn.danger{color:#fecdd3;border-color:#7f1d1d;background:#3a1521}.btn.small{padding:7px 10px;font-size:.9rem}.hero{padding:68px 0 42px;display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid #286044;border-radius:999px;color:#bbf7d0;background:#0d291b;font-size:.88rem;font-weight:700}.dot{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.03;letter-spacing:-2px;margin:20px 0}h1 span{color:var(--green)}h2{font-size:clamp(1.6rem,3vw,2.25rem);letter-spacing:-.8px;margin:0 0 10px}h3{margin:0 0 8px}.lead{font-size:1.12rem;color:var(--muted);max-width:650px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.hero-card,.card,.stat{background:linear-gradient(145deg,#142238,#0e1727);border:1px solid var(--line);border-radius:var(--radius)}.hero-card{padding:22px;box-shadow:0 24px 70px #0004}.server-preview{background:#08111f;border:1px solid #263c58;border-radius:14px;padding:16px;margin-top:16px}.server-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.pill{font-size:.78rem;font-weight:800;padding:4px 8px;border-radius:999px;background:#173b2a;color:#bbf7d0;white-space:nowrap}.pill.gray{background:#27364b;color:#dbeafe}.pill.yellow{background:#44350b;color:#fef3c7}.fakebar{height:8px;background:#243550;border-radius:99px;overflow:hidden;margin:12px 0}.fakebar span{display:block;height:100%;width:72%;background:linear-gradient(90deg,#22c55e,#86efac);border-radius:99px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 30px}.stat{padding:16px}.stat strong{display:block;font-size:1.5rem}.stat span{color:var(--muted);font-size:.9rem}.section{padding:42px 0;scroll-margin-top:88px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{padding:20px}.card p{color:var(--muted);margin:5px 0 15px}.feature-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:#1b342b;color:var(--green);font-size:1.4rem;margin-bottom:14px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.9rem;color:#c6d5e9;font-weight:700}.field input,.field select,.field textarea,.search{width:100%;padding:12px 13px;border-radius:11px;border:1px solid #30435e;background:#081321;color:var(--text);outline:none}.field input:focus,.field select:focus,.field textarea:focus,.search:focus{border-color:var(--green);box-shadow:0 0 0 3px #4ade8020}.field small{color:var(--muted)}.note{padding:13px 15px;border:1px solid #65521c;background:#2b240e;color:#fef3c7;border-radius:12px;margin:15px 0}.success{padding:13px 15px;border:1px solid #236341;background:#0d291b;color:#bbf7d0;border-radius:12px;margin:15px 0}.hidden{display:none!important}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.toolbar .search{flex:1;min-width:180px;max-width:400px}.server-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.server-card{background:#0d1727;border:1px solid var(--line);border-radius:15px;padding:17px}.server-card-top{display:flex;align-items:start;justify-content:space-between;gap:12px}.server-card h3{margin:0}.tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.tag{padding:3px 8px;border-radius:7px;background:#1d2c42;color:#bfd0e6;font-size:.8rem}.server-ip{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#07101c;padding:9px 11px;border-radius:9px;overflow-wrap:anywhere;color:#bbf7d0}.empty{padding:28px;text-align:center;border:1px dashed #354760;border-radius:14px;color:var(--muted);grid-column:1/-1}.tool-result{margin-top:13px;padding:13px;background:#081321;border:1px solid var(--line);border-radius:11px}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);margin-top:30px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.smalltext{font-size:.88rem;color:var(--muted)}.account-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.modal-backdrop{position:fixed;inset:0;background:#000a;display:none;place-items:center;padding:18px;z-index:20}.modal-backdrop.open{display:grid}.modal{width:min(480px,100%);background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px;max-height:90vh;overflow:auto}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.xbtn{background:transparent;border:0;color:var(--muted);font-size:1.5rem;cursor:pointer}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e2fbe9;color:#052e16;font-weight:800;padding:11px 16px;border-radius:12px;box-shadow:0 8px 30px #0006;z-index:50;display:none;max-width:90%;text-align:center}.toast.show{display:block}@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:45px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{align-items:flex-start;padding:12px 0;flex-direction:column}.navlinks{width:100%;overflow-x:auto;flex-wrap:nowrap}.navlinks a,.navlinks button{white-space:nowrap}.section-head{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.grid,.server-list,.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.stats{gap:7px}.stat{padding:12px}.stat strong{font-size:1.2rem}.hero{padding-top:34px}h1{letter-spacing:-1.3px}.wrap{width:91%}.hero-card{padding:16px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="wrap nav">
+  <a class="brand" href="#start" aria-label="MineHost Startseite"><span class="logo">⛏</span><span>Mine<span style="color:var(--green)">Host</span></span></a>
+  <nav class="navlinks" aria-label="Hauptnavigation">
+   <a href="#hosting">Hosting</a><a href="#serverliste">Serverliste</a><a href="#tools">Tools</a><a href="#hilfe">Hilfe</a>
+   <label for="languageSelect" class="smalltext" style="white-space:nowrap">🌐 <span id="languageLabel">Sprache</span></label>
+   <select id="languageSelect" aria-label="Sprache ändern" style="padding:8px;border-radius:10px;border:1px solid #30435e;background:#081321;color:var(--text)">
+    <option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option>
+   </select>
+   <button id="accountBtn">👤 Konto</button>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="wrap hero" id="start">
+ <div>
+  <span class="eyebrow"><span class="dot"></span> Dein Minecraft-Zuhause</span>
+  <h1>Dein Server.<br><span>Deine Welt.</span></h1>
+  <p class="lead">Entdecke Community-Server, plane deinen eigenen Minecraft-Server und finde praktische Tools – an einem Ort.</p>
+  <div class="actions"><a class="btn primary" href="#hosting">＋ Server planen</a><a class="btn" href="#serverliste">Server entdecken →</a></div>
+  <p class="smalltext">Java & Bedrock · Community · Tools</p>
+ </div>
+ <div class="hero-card">
+  <div class="server-head"><div><div class="muted smalltext">MINEHOST SERVER PANEL</div><h3 style="margin-top:4px">Deine nächste Welt</h3></div><span class="pill yellow">Demo</span></div>
+  <div class="server-preview">
+   <div class="server-head"><strong>🌲 Survival-Welt</strong><span class="pill gray">Vorschau</span></div>
+   <p class="muted smalltext">Java / Bedrock · Version auswählbar</p>
+   <div class="fakebar"><span></span></div>
+   <div class="server-head"><span class="smalltext">Einrichtung</span><strong style="color:var(--green)">Planen</strong></div>
+  </div>
+  <p class="smalltext" style="margin-bottom:0">Info: Diese Website ist eine funktionierende Frontend-Demo. Echte Server werden erst nach Anschluss eines Hosting-Backends gestartet.</p>
+ </div>
+</section>
+<div class="wrap stats">
+ <div class="stat"><strong id="statServers">0</strong><span>lokale Server-Einträge</span></div>
+ <div class="stat"><strong>Java + Bedrock</strong><span>beim Planen auswählbar</span></div>
+ <div class="stat"><strong>0 €</strong><span>Website-Demo starten</span></div>
+</div>
+<section class="wrap section" id="hosting">
+ <div class="section-head"><div><h2>⛏ Server planen</h2><p class="muted">Stelle deinen Server zusammen. Deine Einstellungen werden in diesem Browser gespeichert.</p></div></div>
+ <div class="card">
+  <div class="note">⚠️ <strong>Wichtig:</strong> MineHost stellt in dieser Version keinen eigenen Spielserver bereit. Wer einen Server erstellt, ist selbst dafür verantwortlich, einen Hosting-Anbieter zu wählen, ihn zu bezahlen (falls nötig), zu konfigurieren und für 24/7-Betrieb online zu halten. MineHost betreibt den Server nicht und garantiert keine Verfügbarkeit. Dieses Formular speichert nur einen Plan.</div>
+  <form id="serverForm">
+   <div class="formgrid">
+    <div class="field"><label for="serverName">Servername</label><input id="serverName" maxlength="32" placeholder="Meine coole Welt" required></div>
+    <div class="field"><label for="edition">Edition</label><select id="edition"><option>Java</option><option>Bedrock</option><option>Java + Bedrock (mit Geyser)</option></select></div>
+    <div class="field"><label for="version">Minecraft-Version</label><select id="version"><option>Neueste stabile Version</option><option>1.21.8</option><option>1.21.5</option><option>1.20.4</option><option>Andere / später wählen</option></select></div>
+    <div class="field"><label for="gamemode">Spielmodus</label><select id="gamemode"><option>Survival</option><option>Creative</option><option>Vanilla</option><option>Paper / Plugins</option><option>Modded / Forge / Fabric</option><option>Minigames</option></select></div>
+    <div class="field"><label for="players">Maximale Spieler</label><select id="players"><option>5</option><option selected>10</option><option>20</option><option>50</option></select></div>
+    <div class="field"><label for="visibility">Sichtbarkeit</label><select id="visibility"><option>Privat (Freunde)</option><option>Öffentlich (Serverliste)</option></select></div>
+    <div class="field full"><label for="serverDesc">Beschreibung (optional)</label><textarea id="serverDesc" rows="2" maxlength="180" placeholder="Was macht deinen Server besonders?"></textarea></div>
+    <div class="field full"><button class="btn primary" type="submit">Serverplan speichern</button></div>
+   </div>
+  </form>
+  <div id="planResult" class="success hidden" role="status"></div>
+ </div>
+ <div class="section" style="padding-bottom:0">
+  <div class="section-head"><div><h2>Meine Serverpläne</h2><p class="muted">Nur auf diesem Gerät und in diesem Browser gespeichert.</p></div><button class="btn small" id="exportPlans">Pläne exportieren</button></div>
+  <div id="myPlans" class="server-list"></div>
+ </div>
+</section>
+<section class="wrap section" id="serverliste">
+ <div class="section-head"><div><h2>🌍 Serverliste</h2><p class="muted">Füge Beispiel-Server hinzu oder durchsuche deine lokalen Einträge.</p></div><button class="btn" id="addDemo">＋ Beispiel hinzufügen</button></div>
+ <div class="toolbar" style="margin-bottom:15px"><input class="search" id="serverSearch" placeholder="Servername oder Spielmodus suchen …" aria-label="Server suchen"><select class="field input" id="editionFilter" style="max-width:190px;padding:12px;border-radius:11px;border:1px solid #30435e;background:#081321;color:var(--text)"><option value="">Alle Editionen</option><option>Java</option><option>Bedrock</option><option>Java + Bedrock (mit Geyser)</option></select></div>
+ <div id="publicServers" class="server-list"></div>
+ <p class="smalltext">Die Liste ist derzeit lokal. Für eine gemeinsame öffentliche Serverliste braucht es eine Datenbank oder einen Serverlisten-Dienst. MineHost hostet die gelisteten Spielserver nicht.</p>
+</section>
+<section class="wrap section" id="tools">
+ <div class="section-head"><div><h2>🧰 Minecraft-Tools</h2><p class="muted">Kleine Helfer, die direkt in dieser Datei funktionieren.</p></div></div>
+ <div class="grid">
+  <article class="card"><div class="feature-icon">✨</div><h3>Servernamen-Generator</h3><p>Finde eine Idee für deinen nächsten Server.</p><button class="btn primary" id="nameGen">Namen vorschlagen</button><div class="tool-result hidden" id="nameResult"></div></article>
+  <article class="card"><div class="feature-icon">🔐</div><h3>Whitelist-Hilfe</h3><p>Erstelle einen Beispielbefehl für die Java-Konsole.</p><div class="field"><label for="playerName">Minecraft-Spielername</label><input id="playerName" maxlength="16" placeholder="SpielerName"></div><button class="btn" style="margin-top:10px" id="whitelistBtn">Befehl erstellen</button><div class="tool-result hidden" id="whitelistResult"></div></article>
+  <article class="card"><div class="feature-icon">📋</div><h3>Server-Checkliste</h3><p>Hake ab, was du vor dem Start erledigen möchtest.</p><label style="display:block;margin:8px 0"><input type="checkbox"> Servernamen und Version wählen</label><label style="display:block;margin:8px 0"><input type="checkbox"> Regeln schreiben</label><label style="display:block;margin:8px 0"><input type="checkbox"> Backups einrichten</label><label style="display:block;margin:8px 0"><input type="checkbox"> Whitelist und Rechte prüfen</label></article>
+  <article class="card"><div class="feature-icon">🧭</div><h3>Welche Edition?</h3><p><strong>Java:</strong> PC-Spieler, viele Mods und Plugins.<br><strong>Bedrock:</strong> Handy, Konsole und Windows Bedrock.<br><strong>Beide:</strong> normalerweise mit zusätzlicher Geyser-Konfiguration.</p></article>
+  <article class="card"><div class="feature-icon">🛡️</div><h3>Sicherheit</h3><p>Nutze starke Passwörter, aktiviere Backups und gib niemals API-Schlüssel im Website-Code preis.</p></article>
+  <article class="card"><div class="feature-icon">💚</div><h3>Kosten im Blick</h3><p>Die Website-Datei kostet nichts. Ein zuverlässiger 24/7-Minecraft-Server kann jedoch Ressourcen oder einen kostenpflichtigen Tarif benötigen.</p></article>
+ </div>
+</section>
+<section class="wrap section" id="hilfe">
+ <div class="section-head"><div><h2>❓ Hilfe & nächste Schritte</h2><p class="muted">Was für eine echte Hosting-Plattform noch fehlt.</p></div></div>
+ <div class="grid">
+  <article class="card"><h3>1. Hosting-Anbieter</h3><p>MineHost muss einen Anbieter finden, der Server über eine API erstellen, starten, stoppen und löschen kann.</p></article>
+  <article class="card"><h3>2. Sicheres Backend</h3><p>Ein Backend vermittelt zwischen Website und Anbieter. Geheimschlüssel gehören dort hin, niemals in diese HTML-Datei.</p></article>
+  <article class="card"><h3>3. Konten & Datenbank</h3><p>Für echte Konten, gemeinsame Serverlisten, Berechtigungen und gespeicherte Serverdaten braucht es sichere Authentifizierung und eine Datenbank.</p></article>
+ </div>
+ <div class="card" style="margin-top:15px"><h3>Fragen?</h3><p>Wenn du MineHost weiterbaust, beginne damit, einen passenden Anbieter mit kostenlosem Tarif und API zu wählen. Prüfe dessen Limits und Nutzungsbedingungen, bevor du ihn öffentlich anbietest.</p><a class="btn" href="#hosting">Zurück zum Serverplaner ↑</a></div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><div><a class="brand" href="#start"><span class="logo">⛏</span><span>Mine<span style="color:var(--green)">Host</span></span></a><p class="smalltext">Eine unabhängige Minecraft-Community-Demo.</p></div><div class="smalltext">Nicht mit Mojang oder Microsoft verbunden.<br>Keine echten Serverstarts in dieser Demo.</div></div></footer>
+<div class="modal-backdrop" id="accountModal" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+ <div class="modal"><div class="modal-head"><h2 id="accountTitle">👤 Demo-Konto</h2><button class="xbtn" id="closeModal" aria-label="Schließen">×</button></div>
+  <p class="muted">Dies ist nur ein lokales Demo-Profil, kein echtes Benutzerkonto. Es gibt noch keine Anmeldung oder Cloud-Synchronisierung.</p>
+  <form id="profileForm"><div class="field"><label for="profileName">Anzeigename</label><input id="profileName" maxlength="24" placeholder="Dein Name" required></div><button class="btn primary" style="margin-top:13px" type="submit">Profil lokal speichern</button></form>
+  <div id="profileState" class="tool-result hidden"></div>
+  <button class="btn" id="clearLocal" style="margin-top:14px">Lokale Demo-Daten löschen</button>
+ </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $ = s => document.querySelector(s);
+const KEY_PLANS='minehost_demo_plans_v1', KEY_SERVERS='minehost_demo_servers_v1', KEY_PROFILE='minehost_demo_profile_v1';
+function read(key,fallback=[]){try{const x=JSON.parse(localStorage.getItem(key));return x??fallback}catch{return fallback}}
+function write(key,value){localStorage.setItem(key,JSON.stringify(value))}
+function escapeHTML(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
+function allServers(){return [...read(KEY_SERVERS),...read(KEY_PLANS).filter(p=>p.visibility.startsWith('Öffentlich')).map(p=>({...p,sourcePlan:true}))]}
+function serverHTML(s,canDelete=false,index=0){return `<article class="server-card"><div class="server-card-top"><div><h3>${escapeHTML(s.name)}</h3><div class="smalltext">${escapeHTML(s.gamemode)} · ${escapeHTML(s.version)}</div></div><span class="pill ${s.demo?'yellow':''}">${escapeHTML(s.status||'Plan')}</span></div><div class="tags"><span class="tag">${escapeHTML(s.edition)}</span><span class="tag">Bis ${escapeHTML(s.players)} Spieler</span><span class="tag">${escapeHTML(s.visibility||'Lokal')}</span></div>${s.desc?`<p class="smalltext">${escapeHTML(s.desc)}</p>`:''}<div class="server-ip">${s.ip?escapeHTML(s.ip):'Noch keine Server-IP verfügbar'}</div><div class="actions" style="margin-top:11px"><button class="btn small" data-copy="${escapeHTML(s.ip||s.name)}">📋 ${s.ip?'IP kopieren':'Namen kopieren'}</button>${canDelete?`<button class="btn small danger" data-delete="${index}">Löschen</button>`:''}</div></article>`}
+function renderPlans(){const plans=read(KEY_PLANS);$('#statServers').textContent=plans.length;$('#myPlans').innerHTML=plans.length?plans.map((p,i)=>serverHTML(p,true,i)).join(''):'<div class="empty">Noch keine Serverpläne. Erstelle oben deinen ersten Plan.</div>'}
+function renderPublic(){const q=$('#serverSearch').value.trim().toLowerCase(),ed=$('#editionFilter').value;const servers=allServers().filter(s=>(!ed||s.edition===ed)&&(`${s.name} ${s.gamemode} ${s.edition} ${s.desc||''}`).toLowerCase().includes(q));$('#publicServers').innerHTML=servers.length?servers.map(s=>serverHTML(s)).join(''):'<div class="empty">Keine passenden Server gefunden. Füge einen Beispiel-Server hinzu oder ändere deine Suche.</div>'}
+$('#serverForm').addEventListener('submit',e=>{e.preventDefault();const plan={id:Date.now(),name:$('#serverName').value.trim(),edition:$('#edition').value,version:$('#version').value,gamemode:$('#gamemode').value,players:$('#players').value,visibility:$('#visibility').value,desc:$('#serverDesc').value.trim(),status:'Nur geplant',ip:''};if(!plan.name)return;const plans=read(KEY_PLANS);plans.unshift(plan);write(KEY_PLANS,plans);$('#planResult').textContent=`„${plan.name}“ wurde als lokaler Plan gespeichert. Es wurde noch kein echter Minecraft-Server gestartet.`;$('#planResult').classList.remove('hidden');renderPlans();renderPublic();toast('Serverplan gespeichert');});
+$('#myPlans').addEventListener('click',e=>{const b=e.target.closest('[data-delete]');if(!b)return;const plans=read(KEY_PLANS);plans.splice(Number(b.dataset.delete),1);write(KEY_PLANS,plans);renderPlans();renderPublic();toast('Plan gelöscht')});
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-copy]');if(!b)return;const txt=b.dataset.copy;try{await navigator.clipboard.writeText(txt);toast('In die Zwischenablage kopiert')}catch{const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();toast('Kopiert')}});
+$('#serverSearch').addEventListener('input',renderPublic);$('#editionFilter').addEventListener('change',renderPublic);
+$('#addDemo').addEventListener('click',()=>{const samples=[{name:'Emerald Survival',edition:'Java',version:'1.21.8',gamemode:'Survival',players:'20',visibility:'Öffentlich',desc:'Gemeinsam bauen und Abenteuer erleben.',status:'Beispiel',ip:'play.example.invalid',demo:true},{name:'Bedrock Freunde',edition:'Bedrock',version:'Neueste stabile Version',gamemode:'Creative',players:'10',visibility:'Öffentlich',desc:'Kreative Bauwelt für Freunde.',status:'Beispiel',ip:'bedrock.example.invalid',demo:true},{name:'Block & Craft',edition:'Java + Bedrock (mit Geyser)',version:'Neueste stabile Version',gamemode:'Paper / Plugins',players:'20',visibility:'Öffentlich',desc:'Plugins und gemeinsames Spielen.',status:'Beispiel',ip:'mc.example.invalid',demo:true}];const current=read(KEY_SERVERS);current.push(samples[current.length%samples.length]);write(KEY_SERVERS,current);renderPublic();toast('Beispiel hinzugefügt – keine echten Server!')});
+const adjectives=['Emerald','Pixel','Crystal','Shadow','Golden','Sky','Wild','Cozy','Mystic','Block'];const nouns=['Valley','Craft','Kingdom','Islands','Realms','SMP','World','Haven','Legends','Quest'];
+$('#nameGen').addEventListener('click',()=>{const name=adjectives[Math.floor(Math.random()*adjectives.length)]+nouns[Math.floor(Math.random()*nouns.length)];$('#nameResult').textContent=name;$('#nameResult').classList.remove('hidden')});
+$('#whitelistBtn').addEventListener('click',()=>{const n=$('#playerName').value.trim();if(!/^[A-Za-z0-9_]{3,16}$/.test(n)){toast('Bitte einen gültigen Java-Spielernamen eingeben (3–16 Zeichen).');return}$('#whitelistResult').innerHTML=`<code>whitelist add ${escapeHTML(n)}</code> <button class="btn small" data-copy="whitelist add ${escapeHTML(n)}">Befehl kopieren</button>`;$('#whitelistResult').classList.remove('hidden')});
+$('#exportPlans').addEventListener('click',()=>{const data=JSON.stringify(read(KEY_PLANS),null,2);const blob=new Blob([data],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='minehost-serverplaene.json';a.click();URL.revokeObjectURL(url);toast('Export vorbereitet')});
+const modal=$('#accountModal');$('#accountBtn').addEventListener('click',()=>{modal.classList.add('open');const p=read(KEY_PROFILE,null);if(p){$('#profileName').value=p.name;$('#profileState').textContent='Gespeichertes lokales Profil: '+p.name;$('#profileState').classList.remove('hidden')}});$('#closeModal').addEventListener('click',()=>modal.classList.remove('open'));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+$('#profileForm').addEventListener('submit',e=>{e.preventDefault();const p={name:$('#profileName').value.trim()};write(KEY_PROFILE,p);$('#profileState').textContent='Profil lokal gespeichert: '+p.name+' (kein echtes Konto).';$('#profileState').classList.remove('hidden');toast('Demo-Profil gespeichert')});
+$('#clearLocal').addEventListener('click',()=>{if(confirm('Alle lokalen MineHost-Demo-Daten auf diesem Gerät löschen?')){localStorage.removeItem(KEY_PLANS);localStorage.removeItem(KEY_SERVERS);localStorage.removeItem(KEY_PROFILE);$('#profileState').classList.add('hidden');$('#profileName').value='';renderPlans();renderPublic();toast('Lokale Daten gelöscht')}})
+renderPlans();renderPublic();
+
+// Sprachumschaltung: Übersetzt die Website-Oberfläche lokal in Deutsch, Englisch, Spanisch und Französisch.
+const UI_TRANSLATIONS = {
+ en: {
+  "Sprache":"Language","Sprache ändern":"Change language","👤 Konto":"👤 Account","Hosting":"Hosting","Serverliste":"Server list","Hilfe":"Help",
+  "Dein Minecraft-Zuhause":"Your Minecraft home","Dein Server.":"Your server.","Deine Welt.":"Your world.",
+  "Entdecke Community-Server, plane deinen eigenen Minecraft-Server und finde praktische Tools – an einem Ort.":"Discover community servers, plan your own Minecraft server, and find useful tools — all in one place.",
+  "＋ Server planen":"＋ Plan a server","Server entdecken →":"Discover servers →","Java + Bedrock · Community · Tools":"Java + Bedrock · Community · Tools",
+  "Deine nächste Welt":"Your next world","Vorschau":"Preview","Einrichtung":"Setup","Planen":"Plan",
+  "Info: Diese Website ist eine funktionierende Frontend-Demo. Echte Server werden erst nach Anschluss eines Hosting-Backends gestartet.":"Info: This website is a working frontend demo. Real servers can only be started after a hosting backend is connected.",
+  "lokale Server-Einträge":"local server entries","beim Planen auswählbar":"selectable when planning","Website-Demo starten":"website demo to get started",
+  "⛏ Server planen":"⛏ Plan a server","Stelle deinen Server zusammen. Deine Einstellungen werden in diesem Browser gespeichert.":"Configure your server. Your settings are saved in this browser.",
+  "Wichtig:":"Important:","MineHost stellt in dieser Version keinen eigenen Spielserver bereit. Wer einen Server erstellt, ist selbst dafür verantwortlich, einen Hosting-Anbieter zu wählen, ihn zu bezahlen (falls nötig), zu konfigurieren und für 24/7-Betrieb online zu halten. MineHost betreibt den Server nicht und garantiert keine Verfügbarkeit. Dieses Formular speichert nur einen Plan.":"MineHost does not provide a game server in this version. Anyone creating a server is responsible for choosing a hosting provider, paying for it if required, configuring it, and keeping it online 24/7. MineHost does not operate the server or guarantee uptime. This form only saves a plan.",
+  "Servername":"Server name","Edition":"Edition","Minecraft-Version":"Minecraft version","Spielmodus":"Game mode","Maximale Spieler":"Maximum players","Sichtbarkeit":"Visibility","Beschreibung (optional)":"Description (optional)",
+  "Privat (Freunde)":"Private (friends)","Öffentlich (Serverliste)":"Public (server list)","Neueste stabile Version":"Latest stable version","Andere / später wählen":"Other / choose later",
+  "Serverplan speichern":"Save server plan","Meine Serverpläne":"My server plans","Nur auf diesem Gerät und in diesem Browser gespeichert.":"Saved only on this device and in this browser.","Pläne exportieren":"Export plans",
+  "Noch keine Serverpläne. Erstelle oben deinen ersten Plan.":"No server plans yet. Create your first plan above.",
+  "🌍 Serverliste":"🌍 Server list","Füge Beispiel-Server hinzu oder durchsuche deine lokalen Einträge.":"Add example servers or search your local entries.","＋ Beispiel hinzufügen":"＋ Add example",
+  "Servername oder Spielmodus suchen …":"Search server name or game mode …","Alle Editionen":"All editions","Keine passenden Server gefunden. Füge einen Beispiel-Server hinzu oder ändere deine Suche.":"No matching servers found. Add an example server or change your search.",
+  "Die Liste ist derzeit lokal. Für eine gemeinsame öffentliche Serverliste braucht es eine Datenbank oder einen Serverlisten-Dienst. MineHost hostet die gelisteten Spielserver nicht.":"This list is currently local. A shared public server list requires a database or server-list service. MineHost does not host the listed game servers.",
+  "🧰 Minecraft-Tools":"🧰 Minecraft tools","Kleine Helfer, die direkt in dieser Datei funktionieren.":"Small helpers that work directly in this file.",
+  "Servernamen-Generator":"Server name generator","Finde eine Idee für deinen nächsten Server.":"Find an idea for your next server.","Namen vorschlagen":"Suggest a name",
+  "Whitelist-Hilfe":"Whitelist helper","Erstelle einen Beispielbefehl für die Java-Konsole.":"Create an example command for the Java console.","Minecraft-Spielername":"Minecraft player name","Befehl erstellen":"Create command",
+  "Server-Checkliste":"Server checklist","Hake ab, was du vor dem Start erledigen möchtest.":"Check off what you want to do before launch.","Servernamen und Version wählen":"Choose server name and version","Regeln schreiben":"Write rules","Backups einrichten":"Set up backups","Whitelist und Rechte prüfen":"Check whitelist and permissions",
+  "Welche Edition?":"Which edition?","PC-Spieler, viele Mods und Plugins.":"PC players, many mods and plugins.","Handy, Konsole und Windows Bedrock.":"Mobile, console, and Windows Bedrock.","normalerweise mit zusätzlicher Geyser-Konfiguration.":"usually with additional Geyser configuration.",
+  "Sicherheit":"Security","Nutze starke Passwörter, aktiviere Backups und gib niemals API-Schlüssel im Website-Code preis.":"Use strong passwords, enable backups, and never expose API keys in website code.",
+  "Kosten im Blick":"Keep costs in mind","Die Website-Datei kostet nichts. Ein zuverlässiger 24/7-Minecraft-Server kann jedoch Ressourcen oder einen kostenpflichtigen Tarif benötigen.":"The website file costs nothing. A reliable 24/7 Minecraft server may require resources or a paid plan.",
+  "❓ Hilfe & nächste Schritte":"❓ Help & next steps","Was für eine echte Hosting-Plattform noch fehlt.":"What a real hosting platform still needs.",
+  "1. Hosting-Anbieter":"1. Hosting provider","MineHost muss einen Anbieter finden, der Server über eine API erstellen, starten, stoppen und löschen kann.":"MineHost needs a provider that can create, start, stop, and delete servers through an API.",
+  "2. Sicheres Backend":"2. Secure backend","Ein Backend vermittelt zwischen Website und Anbieter. Geheimschlüssel gehören dort hin, niemals in diese HTML-Datei.":"A backend connects the website to the provider. Secret keys belong there, never in this HTML file.",
+  "3. Konten & Datenbank":"3. Accounts & database","Für echte Konten, gemeinsame Serverlisten, Berechtigungen und gespeicherte Serverdaten braucht es sichere Authentifizierung und eine Datenbank.":"Real accounts, shared server lists, permissions, and saved server data require secure authentication and a database.",
+  "Fragen?":"Questions?","Wenn du MineHost weiterbaust, beginne damit, einen passenden Anbieter mit kostenlosem Tarif und API zu wählen. Prüfe dessen Limits und Nutzungsbedingungen, bevor du ihn öffentlich anbietest.":"To keep building MineHost, start by choosing a suitable provider with a free plan and API. Check its limits and terms before offering it publicly.",
+  "Zurück zum Serverplaner ↑":"Back to server planner ↑","Eine unabhängige Minecraft-Community-Demo.":"An independent Minecraft community demo.","Nicht mit Mojang oder Microsoft verbunden.":"Not affiliated with Mojang or Microsoft.","Keine echten Serverstarts in dieser Demo.":"No real servers are started in this demo.",
+  "👤 Demo-Konto":"👤 Demo account","Dies ist nur ein lokales Demo-Profil, kein echtes Benutzerkonto. Es gibt noch keine Anmeldung oder Cloud-Synchronisierung.":"This is only a local demo profile, not a real user account. Sign-in and cloud sync are not available yet.",
+  "Anzeigename":"Display name","Profil lokal speichern":"Save profile locally","Lokale Demo-Daten löschen":"Delete local demo data",
+  "Serverplan gespeichert":"Server plan saved","Nur geplant":"Plan only","Noch keine Server-IP verfügbar":"No server IP available yet","Lokal":"Local","Löschen":"Delete","IP kopieren":"Copy IP","Namen kopieren":"Copy name",
+  "In die Zwischenablage kopiert":"Copied to clipboard","Kopiert":"Copied","Plan gelöscht":"Plan deleted","Beispiel hinzugefügt – keine echten Server!":"Example added — not a real server!","Bitte einen gültigen Java-Spielernamen eingeben (3–16 Zeichen).":"Enter a valid Java player name (3–16 characters).","Befehl kopieren":"Copy command","Export vorbereitet":"Export prepared","Demo-Profil gespeichert":"Demo profile saved","Alle lokalen MineHost-Demo-Daten auf diesem Gerät löschen?":"Delete all local MineHost demo data on this device?","Lokale Daten gelöscht":"Local data deleted",
+  "Version auswählbar":"Version selectable","Serverplan speichern":"Save server plan"
+ },
+ es: {
+  "Sprache":"Idioma","Sprache ändern":"Cambiar idioma","👤 Konto":"👤 Cuenta","Serverliste":"Lista de servidores","Hilfe":"Ayuda",
+  "Dein Minecraft-Zuhause":"Tu hogar de Minecraft","Dein Server.":"Tu servidor.","Deine Welt.":"Tu mundo.",
+  "Entdecke Community-Server, plane deinen eigenen Minecraft-Server und finde praktische Tools – an einem Ort.":"Descubre servidores de la comunidad, planifica tu propio servidor de Minecraft y encuentra herramientas útiles en un solo lugar.",
+  "＋ Server planen":"＋ Planificar servidor","Server entdecken →":"Descubrir servidores →","Deine nächste Welt":"Tu próximo mundo","Vorschau":"Vista previa","Einrichtung":"Configuración","Planen":"Plan",
+  "Info: Diese Website ist eine funktionierende Frontend-Demo. Echte Server werden erst nach Anschluss eines Hosting-Backends gestartet.":"Información: esta web es una demostración funcional de la interfaz. Los servidores reales solo podrán iniciarse al conectar un sistema de alojamiento.",
+  "lokale Server-Einträge":"entradas locales de servidores","beim Planen auswählbar":"seleccionable al planificar","Website-Demo starten":"iniciar la demo web",
+  "⛏ Server planen":"⛏ Planificar servidor","Stelle deinen Server zusammen. Deine Einstellungen werden in diesem Browser gespeichert.":"Configura tu servidor. Los ajustes se guardan en este navegador.",
+  "Wichtig:":"Importante:","MineHost stellt in dieser Version keinen eigenen Spielserver bereit. Wer einen Server erstellt, ist selbst dafür verantwortlich, einen Hosting-Anbieter zu wählen, ihn zu bezahlen (falls nötig), zu konfigurieren und für 24/7-Betrieb online zu halten. MineHost betreibt den Server nicht und garantiert keine Verfügbarkeit. Dieses Formular speichert nur einen Plan.":"En esta versión, MineHost no proporciona un servidor de juego. Quien cree un servidor es responsable de elegir un proveedor, pagarlo si es necesario, configurarlo y mantenerlo en línea 24/7. MineHost no opera el servidor ni garantiza su disponibilidad. Este formulario solo guarda un plan.",
+  "Servername":"Nombre del servidor","Edition":"Edición","Minecraft-Version":"Versión de Minecraft","Spielmodus":"Modo de juego","Maximale Spieler":"Máximo de jugadores","Sichtbarkeit":"Visibilidad","Beschreibung (optional)":"Descripción (opcional)",
+  "Privat (Freunde)":"Privado (amigos)","Öffentlich (Serverliste)":"Público (lista de servidores)","Neueste stabile Version":"Última versión estable","Andere / später wählen":"Otra / elegir después","Serverplan speichern":"Guardar plan","Meine Serverpläne":"Mis planes de servidor","Nur auf diesem Gerät und in diesem Browser gespeichert.":"Guardado solo en este dispositivo y navegador.","Pläne exportieren":"Exportar planes",
+  "Noch keine Serverpläne. Erstelle oben deinen ersten Plan.":"Todavía no hay planes. Crea tu primer plan arriba.","🌍 Serverliste":"🌍 Lista de servidores","Füge Beispiel-Server hinzu oder durchsuche deine lokalen Einträge.":"Añade servidores de ejemplo o busca en tus entradas locales.","＋ Beispiel hinzufügen":"＋ Añadir ejemplo",
+  "Servername oder Spielmodus suchen …":"Buscar nombre o modo de juego …","Alle Editionen":"Todas las ediciones","Keine passenden Server gefunden. Füge einen Beispiel-Server hinzu oder ändere deine Suche.":"No se encontraron servidores. Añade un ejemplo o cambia la búsqueda.",
+  "🧰 Minecraft-Tools":"🧰 Herramientas de Minecraft","Kleine Helfer, die direkt in dieser Datei funktionieren.":"Pequeñas herramientas que funcionan directamente en este archivo.",
+  "Servernamen-Generator":"Generador de nombres","Finde eine Idee für deinen nächsten Server.":"Encuentra una idea para tu próximo servidor.","Namen vorschlagen":"Sugerir nombre",
+  "Whitelist-Hilfe":"Ayuda de lista blanca","Erstelle einen Beispielbefehl für die Java-Konsole.":"Crea un comando de ejemplo para la consola Java.","Minecraft-Spielername":"Nombre de jugador","Befehl erstellen":"Crear comando",
+  "Server-Checkliste":"Lista de comprobación","Hake ab, was du vor dem Start erledigen möchtest.":"Marca lo que quieres hacer antes de empezar.","Servernamen und Version wählen":"Elegir nombre y versión","Regeln schreiben":"Escribir reglas","Backups einrichten":"Configurar copias de seguridad","Whitelist und Rechte prüfen":"Comprobar lista blanca y permisos",
+  "Welche Edition?":"¿Qué edición?","Sicherheit":"Seguridad","Kosten im Blick":"Control de costes","❓ Hilfe & nächste Schritte":"❓ Ayuda y próximos pasos",
+  "1. Hosting-Anbieter":"1. Proveedor de alojamiento","2. Sicheres Backend":"2. Backend seguro","3. Konten & Datenbank":"3. Cuentas y base de datos","Fragen?":"¿Preguntas?",
+  "Zurück zum Serverplaner ↑":"Volver al planificador ↑","Eine unabhängige Minecraft-Community-Demo.":"Una demo independiente de la comunidad de Minecraft.","Nicht mit Mojang oder Microsoft verbunden.":"No afiliado a Mojang ni Microsoft.","Keine echten Serverstarts in dieser Demo.":"Esta demo no inicia servidores reales.",
+  "👤 Demo-Konto":"👤 Cuenta de demostración","Anzeigename":"Nombre visible","Profil lokal speichern":"Guardar perfil localmente","Lokale Demo-Daten löschen":"Borrar datos de demostración locales",
+  "Noch keine Server-IP verfügbar":"Aún no hay IP de servidor","Löschen":"Eliminar","IP kopieren":"Copiar IP","Namen kopieren":"Copiar nombre","In die Zwischenablage kopiert":"Copiado","Kopiert":"Copiado","Plan gelöscht":"Plan eliminado","Beispiel hinzugefügt – keine echten Server!":"Añadido ejemplo: ¡no es un servidor real!","Export vorbereitet":"Exportación preparada","Demo-Profil gespeichert":"Perfil de demostración guardado","Lokale Daten gelöscht":"Datos locales eliminados"
+ },
+ fr: {
+  "Sprache":"Langue","Sprache ändern":"Changer de langue","👤 Konto":"👤 Compte","Serverliste":"Liste des serveurs","Hilfe":"Aide",
+  "Dein Minecraft-Zuhause":"Ton univers Minecraft","Dein Server.":"Ton serveur.","Deine Welt.":"Ton monde.",
+  "Entdecke Community-Server, plane deinen eigenen Minecraft-Server und finde praktische Tools – an einem Ort.":"Découvre des serveurs communautaires, planifie ton propre serveur Minecraft et trouve des outils pratiques au même endroit.",
+  "＋ Server planen":"＋ Planifier un serveur","Server entdecken →":"Découvrir les serveurs →","Deine nächste Welt":"Ton prochain monde","Vorschau":"Aperçu","Einrichtung":"Configuration","Planen":"Planifier",
+  "Info: Diese Website ist eine funktionierende Frontend-Demo. Echte Server werden erst nach Anschluss eines Hosting-Backends gestartet.":"Info : ce site est une démo fonctionnelle de l’interface. Les vrais serveurs ne pourront démarrer qu’après connexion d’un système d’hébergement.",
+  "lokale Server-Einträge":"entrées de serveurs locales","beim Planen auswählbar":"sélectionnable lors de la planification","Website-Demo starten":"démarrer la démo du site",
+  "⛏ Server planen":"⛏ Planifier un serveur","Stelle deinen Server zusammen. Deine Einstellungen werden in diesem Browser gespeichert.":"Configure ton serveur. Tes paramètres sont enregistrés dans ce navigateur.",
+  "Wichtig:":"Important :","MineHost stellt in dieser Version keinen eigenen Spielserver bereit. Wer einen Server erstellt, ist selbst dafür verantwortlich, einen Hosting-Anbieter zu wählen, ihn zu bezahlen (falls nötig), zu konfigurieren und für 24/7-Betrieb online zu halten. MineHost betreibt den Server nicht und garantiert keine Verfügbarkeit. Dieses Formular speichert nur einen Plan.":"Dans cette version, MineHost ne fournit pas de serveur de jeu. Toute personne qui crée un serveur doit choisir un hébergeur, le payer si nécessaire, le configurer et le maintenir en ligne 24 h/24, 7 j/7. MineHost n’exploite pas le serveur et ne garantit pas sa disponibilité. Ce formulaire enregistre uniquement un plan.",
+  "Servername":"Nom du serveur","Edition":"Édition","Minecraft-Version":"Version de Minecraft","Spielmodus":"Mode de jeu","Maximale Spieler":"Nombre maximal de joueurs","Sichtbarkeit":"Visibilité","Beschreibung (optional)":"Description (facultative)",
+  "Privat (Freunde)":"Privé (amis)","Öffentlich (Serverliste)":"Public (liste des serveurs)","Neueste stabile Version":"Dernière version stable","Andere / später wählen":"Autre / choisir plus tard","Serverplan speichern":"Enregistrer le plan","Meine Serverpläne":"Mes plans de serveur","Nur auf diesem Gerät und in diesem Browser gespeichert.":"Enregistré uniquement sur cet appareil et dans ce navigateur.","Pläne exportieren":"Exporter les plans",
+  "Noch keine Serverpläne. Erstelle oben deinen ersten Plan.":"Aucun plan pour le moment. Crée ton premier plan ci-dessus.","🌍 Serverliste":"🌍 Liste des serveurs","Füge Beispiel-Server hinzu oder durchsuche deine lokalen Einträge.":"Ajoute des serveurs d’exemple ou recherche dans tes entrées locales.","＋ Beispiel hinzufügen":"＋ Ajouter un exemple",
+  "Servername oder Spielmodus suchen …":"Rechercher un nom ou un mode de jeu …","Alle Editionen":"Toutes les éditions","Keine passenden Server gefunden. Füge einen Beispiel-Server hinzu oder ändere deine Suche.":"Aucun serveur correspondant. Ajoute un exemple ou modifie ta recherche.",
+  "🧰 Minecraft-Tools":"🧰 Outils Minecraft","Kleine Helfer, die direkt in dieser Datei funktionieren.":"De petits outils qui fonctionnent directement dans ce fichier.",
+  "Servernamen-Generator":"Générateur de noms","Finde eine Idee für deinen nächsten Server.":"Trouve une idée pour ton prochain serveur.","Namen vorschlagen":"Proposer un nom",
+  "Whitelist-Hilfe":"Aide de liste blanche","Erstelle einen Beispielbefehl für die Java-Konsole.":"Crée une commande d’exemple pour la console Java.","Minecraft-Spielername":"Nom du joueur Minecraft","Befehl erstellen":"Créer la commande",
+  "Server-Checkliste":"Liste de vérification","Hake ab, was du vor dem Start erledigen möchtest.":"Coche les tâches à faire avant le lancement.","Servernamen und Version wählen":"Choisir le nom et la version","Regeln schreiben":"Écrire les règles","Backups einrichten":"Configurer les sauvegardes","Whitelist und Rechte prüfen":"Vérifier la liste blanche et les permissions",
+  "Welche Edition?":"Quelle édition ?","Sicherheit":"Sécurité","Kosten im Blick":"Surveiller les coûts","❓ Hilfe & nächste Schritte":"❓ Aide et prochaines étapes",
+  "1. Hosting-Anbieter":"1. Hébergeur","2. Sicheres Backend":"2. Backend sécurisé","3. Konten & Datenbank":"3. Comptes et base de données","Fragen?":"Des questions ?",
+  "Zurück zum Serverplaner ↑":"Retour au planificateur ↑","Eine unabhängige Minecraft-Community-Demo.":"Une démo indépendante de la communauté Minecraft.","Nicht mit Mojang oder Microsoft verbunden.":"Non affilié à Mojang ou Microsoft.","Keine echten Serverstarts in dieser Demo.":"Cette démo ne démarre aucun vrai serveur.",
+  "👤 Demo-Konto":"👤 Compte démo","Anzeigename":"Nom affiché","Profil lokal speichern":"Enregistrer le profil localement","Lokale Demo-Daten löschen":"Supprimer les données de démo locales",
+  "Noch keine Server-IP verfügbar":"Aucune IP de serveur disponible","Löschen":"Supprimer","IP kopieren":"Copier l’IP","Namen kopieren":"Copier le nom","In die Zwischenablage kopiert":"Copié dans le presse-papiers","Kopiert":"Copié","Plan gelöscht":"Plan supprimé","Beispiel hinzugefügt – keine echten Server!":"Exemple ajouté — ce n’est pas un vrai serveur !","Export vorbereitet":"Export prêt","Demo-Profil gespeichert":"Profil démo enregistré","Lokale Daten gelöscht":"Données locales supprimées"
+ }
+};
+const originalText = new WeakMap();
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  const dict = UI_TRANSLATIONS[lang] || {};
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) {
+    if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+    const original = originalText.get(node);
+    const key = original.trim();
+    if (!key) continue;
+    const translated = dict[key];
+    if (translated) {
+      const leading = original.match(/^\s*/)?.[0] || '';
+      const trailing = original.match(/\s*$/)?.[0] || '';
+      node.nodeValue = leading + translated + trailing;
+    } else if (lang === 'de') {
+      node.nodeValue = original;
+    }
+  }
+  const attrMap = {
+    'Meine coole Welt': {'en':'My cool world','es':'Mi mundo genial','fr':'Mon monde génial'},
+    'Was macht deinen Server besonders?': {'en':'What makes your server special?','es':'¿Qué hace especial a tu servidor?','fr':'Qu’est-ce qui rend ton serveur spécial ?'},
+    'Servername oder Spielmodus suchen …': {'en':'Search server name or game mode …','es':'Buscar nombre o modo de juego …','fr':'Rechercher un nom ou un mode de jeu …'},
+    'Dein Name': {'en':'Your name','es':'Tu nombre','fr':'Ton nom'},
+    'SpielerName': {'en':'PlayerName','es':'NombreJugador','fr':'NomJoueur'}
+  };
+  document.querySelectorAll('input,textarea').forEach(el=>{
+    const base = el.dataset.originalPlaceholder ?? el.placeholder;
+    if (!el.dataset.originalPlaceholder) el.dataset.originalPlaceholder = base;
+    el.placeholder = (lang === 'de' ? base : (attrMap[base]?.[lang] || base));
+  });
+  const languageLabel = document.getElementById('languageLabel');
+  if (languageLabel) languageLabel.textContent = ({de:'Sprache',en:'Language',es:'Idioma',fr:'Langue'})[lang] || 'Language';
+  localStorage.setItem('minehost_language', lang);
+}
+document.getElementById('languageSelect').addEventListener('change', e => {
+  // Refresh generated panels first, then translate the full visible page.
+  renderPlans();
+  renderPublic();
+  setLanguage(e.target.value);
+});
+(function initLanguage(){
+  const saved = localStorage.getItem('minehost_language') || 'de';
+  document.getElementById('languageSelect').value = saved;
+  setLanguage(saved);
+})();
+
+</script>
+</body>
+</html>
